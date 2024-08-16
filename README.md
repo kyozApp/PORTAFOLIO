@@ -76,11 +76,11 @@ Bienvenido al proyecto **Mi Portafolio**. Este proyecto incluye un **frontend** 
 6. **Crea el repositorio en GitHub**:
     - Para un repositorio público:
       ```bash
-      gh repo create FENIXTECH --public --source=.
+      gh repo create PORTAFOLIO --public --source=.
       ```
     - Para un repositorio privado:
       ```bash
-      gh repo create FENIXTECH --private --source=.
+      gh repo create PORTAFOLIO --private --source=.
       ```
 
 7. **Sube los cambios al repositorio remoto**:
