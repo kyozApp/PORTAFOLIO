@@ -90,7 +90,7 @@ Bienvenido al proyecto **Mi Portafolio**. Este proyecto incluye un **frontend** 
 
 </details>
 
-## 🔄 Actualización de Ramas
+## 🔄 Actualización del GIT
 
 <details>
 <summary><strong>Pasos para actualizar el Git</strong></summary>
