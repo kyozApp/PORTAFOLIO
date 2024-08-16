@@ -93,7 +93,7 @@ Bienvenido al proyecto **Mi Portafolio**. Este proyecto incluye un **frontend** 
 ## 🔄 Actualización del GIT
 
 <details>
-<summary><strong>Pasos para actualizar el Git</strong></summary>
+<summary><strong>Pasos para actualizar mi Git</strong></summary>
 
 1. **Añade archivos al repositorio**:
     ```bash
