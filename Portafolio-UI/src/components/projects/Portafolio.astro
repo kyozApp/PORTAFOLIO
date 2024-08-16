@@ -1,0 +1,96 @@
+---
+import { Image } from "astro:assets";
+import portafolio from "@assets/projects/Portafolio.png";
+import Asstro from "@components/skills/Asstro.astro";
+import Css from "@components/skills/Css.astro";
+import Html from "@components/skills/Html.astro";
+import Javascript from "@components/skills/Javascript.astro";
+---
+
+<section class="section_portafolio">
+    <h2>🔗 PORTAFOLIO</h2>
+    <div class="image_container">
+        <Image
+            src={portafolio}
+            alt="Foto de perfil"
+            class="imgPortafolio"
+            loading="eager"
+        />
+    </div>
+    <div class="portafolio_container">
+        <p class="paragraph">
+            Proyecto creado con Astro, que esta hecho de componentes con
+            typescript.
+        </p>
+        <h3>@ Habilidades Utilizadas</h3>
+    </div>
+    <div class="div_habilidades">
+        <Asstro />
+        <Html />
+        <Javascript />
+        <Css />
+    </div>
+</section>
+
+<style>
+    .section_portafolio {
+        color: #f8fafc;
+        margin: 70px 40px 0 40px;
+    }
+
+    .image_container {
+        width: auto;
+        height: auto;
+        margin: 20px 0 0 10px;
+    }
+
+    .imgPortafolio {
+        width: 280px;
+        height: 180px;
+        border-radius: 25px;
+        border: 1px solid #718096;
+    }
+
+    .portafolio_container {
+        width: auto;
+        height: auto;
+        margin: 20px 0 0 10px;
+    }
+
+    .paragraph {
+        margin-bottom: 10px;
+    }
+
+    .div_habilidades {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 15px 40px;
+        gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+        .section_portafolio {
+            margin: 100px 20% 50px;
+        }
+
+        .image_container {
+            margin: 20px 0 0 40px;
+            justify-content: start;
+        }
+
+        .imgPortafolio {
+            width: 800px;
+            height: 500px;
+        }
+
+        .portafolio_container {
+            margin: 20px 0 0 40px;
+            justify-content: start;
+        }
+
+        .div_habilidades {
+            margin: 20px 140px 40px 45px;
+            gap: 40px;
+        }
+    }
+</style>

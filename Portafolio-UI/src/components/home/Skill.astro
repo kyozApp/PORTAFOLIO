@@ -1,0 +1,53 @@
+---
+import Asstro from "@components/skills/Asstro.astro";
+import Css from "@components/skills/Css.astro";
+import Docker from "@components/skills/Docker.astro";
+import Html from "@components/skills/Html.astro";
+import Java from "@components/skills/Java.astro";
+import Javascript from "@components/skills/Javascript.astro";
+import Laravel from "@components/skills/Laravel.astro";
+import Mysql from "@components/skills/Mysql.astro";
+import Spring from "@components/skills/Spring.astro";
+import Tailwind from "@components/skills/Tailwind.astro";
+---
+
+<section class="section_skill">
+    <h2>&starf; Habilidades</h2>
+    <div class="div_habilidades">
+        <Asstro />
+        <Html />
+        <Java />
+        <Spring />
+        <Javascript />
+        <Css />
+        <Mysql />
+        <Docker />
+        <Laravel />
+        <Tailwind />
+    </div>
+</section>
+
+<style>
+    .section_skill {
+        color: #f8fafc;
+        margin: 40px 40px 0;
+    }
+
+    .div_habilidades {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 15px 40px;
+        gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+        .section_skill {
+            margin: 32px 20%;
+        }
+
+        .div_habilidades {
+            margin: 20px 140px 40px 15px;
+            gap: 40px;
+        }
+    }
+</style>

@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets";
+import labrujastore from "@assets/projects/Labrujastore.png";
+import Asstro from "@components/skills/Asstro.astro";
+import Css from "@components/skills/Css.astro";
+import Html from "@components/skills/Html.astro";
+import Javascript from "@components/skills/Javascript.astro";
+import Java from "@components/skills/Java.astro";
+import Spring from "@components/skills/Spring.astro";
+import Mysql from "@components/skills/Mysql.astro";
+import Docker from "@components/skills/Docker.astro";
+---
+
+<section class="section_portafolio">
+    <h2>🔗 LA BRUJA STORE</h2>
+    <div class="image_container">
+        <Image
+            src={labrujastore}
+            alt="Foto de perfil"
+            class="imgLabrujastore"
+            loading="eager"
+        />
+    </div>
+    <div class="portafolio_container">
+        <p class="paragraph">
+            Proyecto creado con Astro en el frontend y Spring en el Backend con
+            MySQL, que esta hecho de componentes con typescript. Sitio web de la
+            tienda La Bruja Store con un carrito de compra, catalogo y
+            cotizacion de productos.
+        </p>
+        <h3>@ Habilidades Utilizadas</h3>
+    </div>
+    <div class="div_habilidades">
+        <Asstro />
+        <Html />
+        <Spring />
+        <Java />
+        <Javascript />
+        <Css />
+        <Mysql />
+        <Docker />
+    </div>
+</section>
+
+<style>
+    .section_portafolio {
+        color: #f8fafc;
+        margin: 70px 40px 0 40px;
+    }
+
+    .image_container {
+        width: auto;
+        height: auto;
+        margin: 20px 0 0 10px;
+    }
+
+    .imgLabrujastore {
+        width: 280px;
+        height: 180px;
+        border-radius: 25px;
+        border: 1px solid #718096;
+    }
+
+    .portafolio_container {
+        width: auto;
+        height: auto;
+        margin: 20px 0 0 10px;
+    }
+
+    .paragraph {
+        margin-bottom: 10px;
+    }
+
+    .div_habilidades {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 15px 40px;
+        gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+        .section_portafolio {
+            margin: 100px 20% 50px;
+        }
+
+        .image_container {
+            margin: 20px 0 0 40px;
+            justify-content: start;
+        }
+
+        .imgLabrujastore {
+            width: 800px;
+            height: 500px;
+        }
+
+        .portafolio_container {
+            margin: 20px 0 0 40px;
+            justify-content: start;
+        }
+
+        .div_habilidades {
+            margin: 20px 250px 40px 45px;
+            gap: 40px;
+        }
+    }
+</style>

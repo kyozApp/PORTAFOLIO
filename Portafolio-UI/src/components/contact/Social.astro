@@ -1,0 +1,38 @@
+---
+import Github from "@components/contact/Github.astro";
+import Linkedin from "@components/contact/Linkedin.astro";
+import Whatsapp from "@components/contact/Whatsapp.astro";
+---
+
+<section class="section_social">
+    <h2>🔗 Redes Sociales</h2>
+    <div class="social_container">
+        <Whatsapp />
+        <Github />
+        <Linkedin />
+    </div>
+</section>
+
+<style>
+    .section_social {
+        color: #f8fafc;
+        margin: 40px 40px 0 40px;
+    }
+
+    .social_container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 45px 40px;
+        gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+        .section_social {
+            margin: 50px 20%;
+        }
+
+        .social_container {
+            margin: 20px 0 0 40px;
+        }
+    }
+</style>

@@ -1,0 +1,114 @@
+---
+
+---
+
+<section class="section_email">
+    <h2>✉️ Email</h2>
+    <div class="email_container">
+        <div class="div_mensaje" id="mensaje_copiado">
+            <p>Correo copiado</p>
+        </div>
+        <div class="div_email">
+            <h3 id="email" class="copiar_email">kyoz.app@gmail.com</h3>
+            <button class="button_email">Copiar</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    const button_copiar: NodeListOf<HTMLButtonElement> =
+        document.querySelectorAll<HTMLButtonElement>(".button_email");
+
+    function copiar_al_portapapeles() {
+        const emailElement = document.getElementById(
+            "email",
+        ) as HTMLElement | null;
+        if (emailElement) {
+            const email = emailElement.innerText;
+            navigator.clipboard
+                .writeText(email)
+                .then(() => {
+                    const mensajeElement = document.getElementById(
+                        "mensaje_copiado",
+                    ) as HTMLElement | null;
+                    if (mensajeElement) {
+                        mensajeElement.style.display = "flex";
+                        setTimeout(() => {
+                            mensajeElement.style.display = "none";
+                        }, 1000);
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error copying to clipboard: ", error);
+                });
+        } else {
+            console.error("Email element not found");
+        }
+    }
+
+    button_copiar.forEach((button: HTMLButtonElement) => {
+        button.addEventListener("click", () => {
+            copiar_al_portapapeles();
+        });
+    });
+</script>
+
+<style>
+    .section_email {
+        color: #f8fafc;
+        margin: 40px 40px 0 40px;
+    }
+
+    .div_mensaje {
+        background-color: #065f46;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        border: 1px solid #718096;
+        padding: 10px 0;
+        width: 87%;
+    }
+
+    .div_email {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0 0 0;
+    }
+
+    .button_email {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        padding: 10px 15px;
+        color: #f8fafc;
+        border: 1px solid #718096;
+        background-color: inherit;
+    }
+
+    .button_email:hover {
+        color: #f87171;
+    }
+
+    .email_container {
+        width: auto;
+        height: auto;
+        margin: 20px 0 0 20px;
+    }
+
+    @media (min-width: 768px) {
+        .section_email {
+            margin: 50px 20%;
+        }
+
+        .email_container {
+            margin: 20px 0 0 40px;
+        }
+
+        .div_mensaje {
+            width: 270px;
+        }
+    }
+</style>

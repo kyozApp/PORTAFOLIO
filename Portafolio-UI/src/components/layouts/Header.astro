@@ -1,0 +1,148 @@
+---
+
+---
+
+<header class="header">
+    <nav class="navbar">
+        <h1 class="logo">Portafolio KYOZ</h1>
+        <label for="menu" class="label_menu">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                fill="currentColor"
+                class="icon_menu"
+                viewBox="0 0 16 16"
+            >
+                <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                ></path>
+            </svg>
+            <span class="sr-only">Toggle menu</span>
+        </label>
+
+        <input type="checkbox" id="menu" class="input_menu" />
+
+        <ul class="ul_link">
+            <li class="li_link">
+                <a href="/" class="link">SOBRE MI</a>
+            </li>
+            <li class="li_link">
+                <a href="/projects" class="link">PROYECTOS</a>
+            </li>
+            <li class="li_link">
+                <a href="/contact" class="link">CONTACTO</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    .header {
+        height: 80px;
+        background-color: #334155;
+    }
+
+    .navbar {
+        height: 100%;
+        display: flex;
+        width: min(1200px, 100%);
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 0 32px;
+    }
+
+    .logo {
+        color: #f8fafc;
+    }
+
+    .label_menu {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .icon_menu {
+        color: #f8fafc;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .input_menu {
+        display: none;
+    }
+
+    .input_menu:checked + .ul_link {
+        height: calc(100vh - 80px);
+    }
+
+    .ul_link {
+        background-color: #64748b;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+        transition: all 0.3s;
+        z-index: 50;
+    }
+
+    .li_link {
+        list-style: none;
+    }
+
+    .link {
+        text-decoration: none;
+        font-size: 48px;
+        color: #f8fafc;
+        font-weight: bold;
+    }
+
+    .link:hover {
+        color: #f87171;
+    }
+
+    @media (min-width: 768px) {
+        .label_menu {
+            display: none;
+        }
+
+        .ul_link {
+            background-color: #334155;
+            position: static;
+            width: auto;
+            height: auto;
+            flex-direction: row;
+            gap: 32px;
+        }
+
+        .link {
+            font-size: 20px;
+            transition: all 0.3s;
+            padding: 8px 16px;
+        }
+
+        .link:hover {
+            color: #f87171;
+        }
+    }
+</style>
